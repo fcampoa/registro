@@ -15,11 +15,13 @@ import RegisterPage from './pages/RegisterPage';
 import Dashboard from './pages/Dashboard';
 import AccountPage from './pages/AccountPage';
 import AnimalListPage from './pages/AnimalListPage';
+import AnimalSearchPage from './pages/AnimalSearchPage';
 import RegisterAnimalPage from './pages/RegisterAnimalPage';
 import MembershipPage from './pages/MembershipPage';
 
 // Admin páginas
 import AdminVeterinariansPage from './pages/AdminVeterinariansPage';
+import AdminCertificatesPage from './pages/AdminCertificatesPage';
 
 import './App.css';
 
@@ -112,6 +114,7 @@ function App() {
             <Route index element={<Dashboard currentUser={currentUser} />} />
             <Route path="account" element={<AccountPage currentUser={currentUser} />} />
             <Route path="animals" element={<AnimalListPage currentUser={currentUser} />} />
+            <Route path="search" element={<AnimalSearchPage />} />
             <Route path="register-animal" element={<RegisterAnimalPage />} />
             <Route path="membership" element={<MembershipPage currentUser={currentUser} />} />
           </Route>
@@ -129,6 +132,7 @@ function App() {
           >
             <Route index element={<Dashboard currentUser={currentUser} />} />
             <Route path="veterinarians" element={<AdminVeterinariansPage currentUser={currentUser} />} />
+            <Route path="certificates" element={<AdminCertificatesPage />} />
           </Route>
 
           {/* Ruta catch-all */}

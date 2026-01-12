@@ -22,6 +22,7 @@ export interface Animal {
   ownerId: string;
   vetExaminations: VetExamination[];
   paymentStatus: 'paid' | 'pending' | 'overdue';
+  price?: number; // Precio de venta (opcional)
 }
 
 export interface Vaccination {
@@ -70,4 +71,30 @@ export interface AnimalRegistrationRequest {
   requestDate: Date;
   status: 'pending' | 'approved' | 'rejected';
   paymentIntentId?: string;
+}
+
+export interface RegistrationCertificate {
+  id: string;
+  certificateNumber: string;
+  animalId: string;
+  issuedDate: Date;
+  issuedBy: string;
+  qrCode?: string;
+  digitalSignature: string;
+  status: 'active' | 'revoked' | 'expired';
+}
+
+export interface AnimalSearchFilters {
+  species?: string;
+  breed?: string;
+  priceRange?: {
+    min: number;
+    max: number;
+  };
+  healthStatus?: string;
+  gender?: string;
+  ageRange?: {
+    min: number;
+    max: number;
+  };
 }

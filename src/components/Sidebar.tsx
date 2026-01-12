@@ -9,7 +9,9 @@ import {
   Users, 
   Settings,
   ChevronRight,
-  LogOut
+  LogOut,
+  Search,
+  FileText
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -37,6 +39,11 @@ const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout }) => {
       icon: <List size={20} />
     },
     {
+      label: 'Buscar Animales',
+      path: '/dashboard/search',
+      icon: <Search size={20} />
+    },
+    {
       label: 'Registrar Animal',
       path: '/dashboard/register-animal',
       icon: <Plus size={20} />
@@ -58,6 +65,11 @@ const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout }) => {
       label: 'Veterinarios',
       path: '/admin/veterinarians',
       icon: <Users size={20} />
+    },
+    {
+      label: 'Certificados',
+      path: '/admin/certificates',
+      icon: <FileText size={20} />
     }
   ];
 

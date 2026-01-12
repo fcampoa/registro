@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, LogIn, LogOut, Menu } from 'lucide-react';
+import { User, LogIn, LogOut, Menu, Search } from 'lucide-react';
 
 interface NavbarProps {
   currentUser: any;
@@ -37,6 +37,15 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser, onLogout }) => {
               <Link to="/contacto" className="hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium">
                 Contacto
               </Link>
+              {currentUser && (
+                <Link 
+                  to="/dashboard/search" 
+                  className="hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1"
+                >
+                  <Search size={16} />
+                  Buscar
+                </Link>
+              )}
             </div>
           </div>
 
