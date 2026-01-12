@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { FileText, Printer, Download, Search, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
+import { FileText, Printer, Search, CheckCircle } from 'lucide-react';
 import type { Animal, RegistrationCertificate } from '../types';
 
 // Datos dummy
